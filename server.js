@@ -19,7 +19,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 const tableName = process.env.DYNAMO_TABLE_NAME;
 
 const app = express();
-const PORT = 4000;
+const PORT = 80;
 
 // Định cấu hình Multer
 const storage = multer.memoryStorage();
