@@ -31,6 +31,12 @@ const upload = multer({
 // Sử dụng middleware cors để cho phép yêu cầu từ các domain khác
 app.use(cors());
 
+// Endpoint để kiểm tra service
+app.get('/test', (req, res) => {
+  res.status(200).send('Service is running.');
+});
+
+
 // Endpoint để upload file lên S3
 app.post('/upload', upload.single('file'), (req, res) => {
   const file = req.file;
